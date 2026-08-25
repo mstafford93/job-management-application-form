@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.darkmode-toggle {
+    background-color: yellow;
+    margin: 0.25rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-header {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: aquamarine;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px aqua;
+  width: 60%;
+  margin: 2rem;
+}
+
+form {
+  width: 90%;
+  justify-items: center;
+}
+.botInput {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  height: 10vh;
+  padding: 1rem;
+  width: 100%;
+}
+
+.botInput select {
+  height: 100%;
+  width: 90%;
+}
+
+.job-status {
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bot-input {
+    border-radius: 8px;
+    padding-left: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.submit-data {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 8px;
+}
+
+.bottom-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 6rem;
+}
+
+.bottom-line button {
+    background-color: rgb(3, 3, 150);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.li-item {
+  color: black;
+  justify-self: center;
+  list-style-type: none;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+/*Light mode styles*/
+
+.lightMode {
+    background-color: white;
+}
+
+.lightMode .darkmode-toggle {
+    background-color: black;
+    color: white;
+}
+
+.lightMode .form-header {
+    background-color: rgb(141, 140, 140);
+    box-shadow: 2px 2px 2px grey;
+}
+
+.lightMode .submit-data {
+    background-color: rgb(250, 103, 103);
+}
+
+.lightMode .bottom-line button {
+    background-color: rgb(7, 7, 7);
+    color: rgb(253, 252, 252);
+}

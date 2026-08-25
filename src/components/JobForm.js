@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import JobItem from './JobItem';
+import "./AppForm.css"
+
 const JobForm = () => {
     const [listItems, setListItems] = useState([])
     const [addItem, SetAddItem] = useState({ job: "", status: "" })
+    const [toggleSwitch, setToggleSwitch] = useState(false)
+
+    const handleToggleMode = () => {
+        let body = document.body.classList
+        setToggleSwitch(!toggleSwitch)
+        if (toggleSwitch === true){
+            body.add("lightMode")
+        } else {
+            body.remove("lightMode")
+        }
+    }
 
 
     const handleInputChangeJob = (event) => {
@@ -27,6 +40,7 @@ const JobForm = () => {
 
     return (
         <>
+        <button className='darkmode-toggle' onClick={handleToggleMode}>Dark Mode Toggle</button>
         <div className="form-header">
             <form>
                 <div className='botInput'>
