@@ -31,9 +31,10 @@ const JobForm = () => {
                         className="bot-input"
                         placeholder="Enter the job"
                         onChange={handleInputChangeJob}
+                        value={addItem.job}
                     />
                     <div className='select'>
-                        <select className="job-status" onChange={handleInputChangeStatus}>
+                        <select className="job-status" onChange={handleInputChangeStatus} value={addItem.status}>
                             <option value="Start">Start Process</option>
                             <option value="Running">Running</option>
                             <option value="Completed">Completed</option>
