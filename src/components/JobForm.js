@@ -34,10 +34,10 @@ const JobForm = () => {
                     />
                     <div className='select'>
                         <select className="job-status" onChange={handleInputChangeStatus}>
-                            <option value="start">Start Process</option>
-                            <option value="running">Running</option>
-                            <option value="completed">Completed</option>
-                            <option value="stopped">Stopped</option>
+                            <option value="Start">Start Process</option>
+                            <option value="Running">Running</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Stopped">Stopped</option>
                         </select>
                     </div>
                     <button type="submit" className="submit-data" onClick={addItemToList}>Add Job</button>
