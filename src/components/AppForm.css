@@ -8,11 +8,15 @@ body {
 }
 
 .darkmode-toggle {
-    background-color: yellow;
+    background-color: rgb(197, 197, 2);
     margin: 0.25rem;
     padding: 0.5rem;
     border-radius: 8px;
     font-weight: 600;
+}
+
+.darkmode-toggle:hover {
+    background-color: rgb(252, 252, 72);
 }
 
 .form-header {
@@ -62,6 +66,10 @@ form {
     border-radius: 8px;
 }
 
+.submit-data:hover {
+    background-color: rgb(162, 66, 252);
+}
+
 .bottom-line {
   display: flex;
   justify-content: space-between;
@@ -74,6 +82,10 @@ form {
     color: white;
     border-radius: 8px;
     padding: 20px;
+}
+
+.bottom-line button:hover {
+    background-color: rgb(64, 64, 252);
 }
 
 .li-item {
@@ -100,6 +112,10 @@ form {
     color: white;
 }
 
+.lightMode .darkmode-toggle:hover {
+    background-color: rgb(117, 116, 116);
+}
+
 .lightMode .form-header {
     background-color: rgb(141, 140, 140);
     box-shadow: 2px 2px 2px grey;
@@ -109,9 +125,17 @@ form {
     background-color: rgb(250, 103, 103);
 }
 
+.lightMode .submit-data:hover {
+    background-color: rgb(250, 149, 149);
+}
+
 .lightMode .bottom-line button {
     background-color: rgb(7, 7, 7);
     color: rgb(253, 252, 252);
+}
+
+.lightMode .bottom-line button:hover {
+    background-color: rgb(117, 116, 116);
 }
 
 
