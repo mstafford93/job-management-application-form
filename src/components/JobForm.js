@@ -20,7 +20,7 @@ const JobForm = () => {
         } else {
         setListItems([...listItems, addItem])
         SetAddItem({ job: "", status: "" })
-        console.log(listItems)
+        //console.log(listItems)
         }
     }
 
