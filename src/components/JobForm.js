@@ -14,10 +14,14 @@ const JobForm = () => {
     }
 
     const addItemToList = (event) => {
+        event.preventDefault()
+        if(addItem.job === "") {
+            alert("Please enter job")
+        } else {
         setListItems([...listItems, addItem])
         SetAddItem({ job: "", status: "" })
         console.log(listItems)
-        event.preventDefault()
+        }
     }
 
 
