@@ -45,3 +45,15 @@ form {
   height: 10vh;
   padding: 1rem;
 }
+
+.li-item {
+  color: black;
+  justify-self: center;
+  list-style-type: none;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
