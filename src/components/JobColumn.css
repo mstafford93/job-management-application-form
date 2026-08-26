@@ -3,8 +3,18 @@
     background-color: lightcoral;
     text-align: center;
     margin: 1rem;
+    padding: 1rem;
 }
 
 .sectionImage {
     height: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .singleSection {
+        justify-self: center;
+        width: 70%;
+        border-radius: 8px;
+        min-height: 3vh;
+    }
 }
