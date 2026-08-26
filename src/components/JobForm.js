@@ -55,8 +55,17 @@ const JobForm = () => {
         }
             setListItems([...listItems, addItem])
             setAddItem({id:jobId, job: "", status: "" })
-            console.log(addItem)
+            //console.log(addItem)
         }
+
+        const handleRemove = (id) => {
+        setNeedToStart(needToStart.filter(task => task.id !== id))
+        setCompleted(completed.filter(task => task.id !== id))
+        setInProgress(inProgress.filter(task => task.id !== id))
+        setListItems(listItems.filter(task => task.id !== id))
+        //console.log(listItems)
+
+    }
 
 
     return (
@@ -93,13 +102,13 @@ const JobForm = () => {
             </div>
             <div className='columnSection'>
                 <JobColumn value="Need to Start" image={Failed} newClass = "singleSection needToStart"> 
-                    {needToStart.map((task, index) => <JobItem key={index} task={task}/>)}
+                    {needToStart.map((task) => <JobItem key={task.id} task={task}  handleRemove={handleRemove}/>)}
                 </JobColumn>
                 <JobColumn value="In Progress" image={InProgress} newClass = "singleSection inProgress">
-                    {inProgress.map((task, index) => <JobItem key={index} task={task}/>)}
+                    {inProgress.map((task) => <JobItem key={task.id} task={task} handleRemove={handleRemove}/>)}
                 </JobColumn>
                 <JobColumn value="Completed" image={Completed} newClass = "singleSection completed">
-                    {completed.map((task) => <JobItem key={task.id} task={task}/>)}
+                    {completed.map((task) => <JobItem key={task.id} task={task} handleRemove={handleRemove}/>)}
                 </JobColumn>
             </div>
         </>
