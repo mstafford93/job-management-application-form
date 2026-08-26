@@ -11,14 +11,36 @@
 
 .singleSection {
     width: 33%;
-    background-color: lightcoral;
     text-align: center;
     margin: 1rem;
     padding: 1rem;
+    border-radius: 8px;
+}
+
+.needToStart {
+    background-color: rgb(243, 58, 58);
+    border: 2px solid red;
+}
+
+.inProgress {
+    background-color: rgb(241, 182, 70);
+    border: 2px solid orange;
+}
+
+.completed {
+    background-color: rgb(38, 212, 38);
+    border: 2px solid green;
 }
 
 .sectionImage {
     height: 2rem;
+}
+
+.li-item{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
 }
 
 @media (max-width: 1000px) {

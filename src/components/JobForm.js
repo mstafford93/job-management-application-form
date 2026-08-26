@@ -90,13 +90,13 @@ const JobForm = () => {
                 </form>
             </div>
             <div className='columnSection'>
-                <JobColumn value="Need to Start" image={Failed}> 
+                <JobColumn value="Need to Start" image={Failed} newClass = "singleSection needToStart"> 
                     {needToStart.map((task, index) => <JobItem key={index} task={task}/>)}
                 </JobColumn>
-                <JobColumn value="In Progress" image={InProgress}>
+                <JobColumn value="In Progress" image={InProgress} newClass = "singleSection inProgress">
                     {inProgress.map((task, index) => <JobItem key={index} task={task}/>)}
                 </JobColumn>
-                <JobColumn value="Completed" image={Completed}>
+                <JobColumn value="Completed" image={Completed} newClass = "singleSection completed">
                     {completed.map((task, index) => <JobItem key={index} task={task}/>)}
                 </JobColumn>
             </div>
