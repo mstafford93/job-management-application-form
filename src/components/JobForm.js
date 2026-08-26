@@ -14,6 +14,9 @@ const JobForm = () => {
     const [inProgress, setInProgress] = useState([])
     const [completed, setCompleted] = useState([])
 
+
+
+
     const handleToggleMode = () => {
         let body = document.body.classList
         setToggleSwitch(!toggleSwitch)
@@ -38,9 +41,19 @@ const JobForm = () => {
         if(addItem.status === "" || addItem.job === ""){
             return alert ("Please Enter Job and Status")
         }
+
+        if(addItem.status === "Need To Start"){
+            setNeedToStart([...needToStart, addItem])
+        } else if (addItem.status === "In-Progress"){
+            setInProgress([...inProgress, addItem])
+        } else if (addItem.status === "Completed"){
+            setCompleted([...completed, addItem])
+        } else {
+            alert ("Unknown status")
+        }
             setListItems([...listItems, addItem])
             SetAddItem({ job: "", status: "" })
-            //console.log(listItems)
+            //console.log(needToStart)
         }
 
 
@@ -78,10 +91,14 @@ const JobForm = () => {
             </div>
             <div className='columnSection'>
                 <JobColumn value="Need to Start" image={Failed}> 
-                    {listItems.map((task, index) => <JobItem key={index} task={task}/>)}
+                    {needToStart.map((task, index) => <JobItem key={index} task={task}/>)}
                 </JobColumn>
-                <JobColumn value="In Progress" image={InProgress} />
-                <JobColumn value="Completed" image={Completed} />
+                <JobColumn value="In Progress" image={InProgress}>
+                    {inProgress.map((task, index) => <JobItem key={index} task={task}/>)}
+                </JobColumn>
+                <JobColumn value="Completed" image={Completed}>
+                    {completed.map((task, index) => <JobItem key={index} task={task}/>)}
+                </JobColumn>
             </div>
         </>
     );
