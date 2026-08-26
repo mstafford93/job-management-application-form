@@ -14,6 +14,7 @@ const JobForm = () => {
     const [inProgress, setInProgress] = useState([])
     const [completed, setCompleted] = useState([])
     const [jobId, setJobId] = useState(1)
+    const [searchInput, setSearchInput] = useState("")
 
 
 
@@ -26,6 +27,10 @@ const JobForm = () => {
         } else {
             body.remove("lightMode")
         }
+    }
+
+    const handleSearchInput = (e) => {
+        setSearchInput(e.target.value)
     }
 
 
