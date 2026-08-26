@@ -8,11 +8,12 @@ import JobItem from './JobItem';
 
 const JobForm = () => {
     const [listItems, setListItems] = useState([])
-    const [addItem, SetAddItem] = useState({ job: "", status: "" })
+    const [addItem, setAddItem] = useState({ id: "", job: "", status: "" })
     const [toggleSwitch, setToggleSwitch] = useState(false)
     const [needToStart, setNeedToStart] = useState([])
     const [inProgress, setInProgress] = useState([])
     const [completed, setCompleted] = useState([])
+    const [jobId, setJobId] = useState(0)
 
 
 
@@ -29,11 +30,11 @@ const JobForm = () => {
 
 
     const handleInputChangeJob = (event) => {
-        SetAddItem({ ...addItem, job: event.target.value })
+        setAddItem({ ...addItem, job: event.target.value })
     }
 
     const handleInputChangeStatus = (event) => {
-        SetAddItem({ ...addItem, status: event.target.value })
+        setAddItem({ ...addItem, status: event.target.value })
     }
 
     const addItemToList = (event) => {
@@ -41,7 +42,8 @@ const JobForm = () => {
         if(addItem.status === "" || addItem.job === ""){
             return alert ("Please Enter Job and Status")
         }
-
+        setJobId(jobId + 1)
+        setAddItem({...addItem, id:jobId})
         if(addItem.status === "Need To Start"){
             setNeedToStart([...needToStart, addItem])
         } else if (addItem.status === "In-Progress"){
@@ -52,8 +54,8 @@ const JobForm = () => {
             alert ("Unknown status")
         }
             setListItems([...listItems, addItem])
-            SetAddItem({ job: "", status: "" })
-            //console.log(needToStart)
+            setAddItem({id:jobId, job: "", status: "" })
+            console.log(addItem)
         }
 
 
