@@ -8,12 +8,12 @@ import JobItem from './JobItem';
 
 const JobForm = () => {
     const [listItems, setListItems] = useState([])
-    const [addItem, setAddItem] = useState({ id: "", job: "", status: "" })
+    const [addItem, setAddItem] = useState({ id: 0, job: "", status: "" })
     const [toggleSwitch, setToggleSwitch] = useState(false)
     const [needToStart, setNeedToStart] = useState([])
     const [inProgress, setInProgress] = useState([])
     const [completed, setCompleted] = useState([])
-    const [jobId, setJobId] = useState(0)
+    const [jobId, setJobId] = useState(1)
 
 
 
@@ -99,7 +99,7 @@ const JobForm = () => {
                     {inProgress.map((task, index) => <JobItem key={index} task={task}/>)}
                 </JobColumn>
                 <JobColumn value="Completed" image={Completed} newClass = "singleSection completed">
-                    {completed.map((task, index) => <JobItem key={index} task={task}/>)}
+                    {completed.map((task) => <JobItem key={task.id} task={task}/>)}
                 </JobColumn>
             </div>
         </>
