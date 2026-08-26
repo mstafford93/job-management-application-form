@@ -14,7 +14,6 @@ const JobForm = () => {
     const [inProgress, setInProgress] = useState([])
     const [completed, setCompleted] = useState([])
     const [jobId, setJobId] = useState(1)
-    const [searchInput, setSearchInput] = useState("")
 
 
 
@@ -29,10 +28,7 @@ const JobForm = () => {
         }
     }
 
-    const handleSearchInput = (e) => {
-        setSearchInput(e.target.value)
-    }
-
+    
 
     const handleInputChangeJob = (event) => {
         setAddItem({ ...addItem, job: event.target.value })
