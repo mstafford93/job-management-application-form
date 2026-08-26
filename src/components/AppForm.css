@@ -88,18 +88,7 @@ form {
     background-color: rgb(64, 64, 252);
 }
 
-.li-item {
-  color: black;
-  justify-self: center;
-  list-style-type: none;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0.5rem;
-}
+
 
 /*Light mode styles*/
 

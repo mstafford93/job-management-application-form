@@ -1,3 +1,14 @@
+.columnSection {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px) {
+    .columnSection {
+        display: block;
+    }
+}
+
 .singleSection {
     width: 33%;
     background-color: lightcoral;
