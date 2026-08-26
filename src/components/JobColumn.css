@@ -1,0 +1,10 @@
+.singleSection {
+    width: 33%;
+    background-color: lightcoral;
+    text-align: center;
+    margin: 1rem;
+}
+
+.sectionImage {
+    height: 2rem;
+}
