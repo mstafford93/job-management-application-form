@@ -17,14 +17,26 @@
     border: 2px solid red;
 }
 
+.needToStart .li-item {
+    background-color: rgb(253, 24, 24);
+}
+
 .inProgress {
     background-color: rgb(241, 182, 70);
     border: 2px solid orange;
 }
 
+.inProgress .li-item{
+    background-color: rgb(245, 174, 42);
+}
+
 .completed {
     background-color: rgb(38, 212, 38);
     border: 2px solid green;
+}
+
+.completed .li-item {
+   background-color: rgb(14, 167, 14); 
 }
 
 .sectionImage {
@@ -33,10 +45,27 @@
 
 .li-item{
     list-style-type: none;
-    display: flex;
-    justify-content: space-between;
+    font-weight: 700;
     padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgb(54, 54, 54);
+    margin-bottom: 0.5rem;
 }
+
+.li-item .Minor {
+    background-color: #26a030 !important;
+}
+
+.li-item .Moderate {
+    background-color: #f5bc52 !important;
+}
+
+.li-item .Important {
+    background-color: #f5332c !important;
+}
+
+
 
 .li-item button {
     background-color: black;
@@ -45,6 +74,7 @@
     padding:0.25rem;
     border-radius: 8px;
     font-weight: 600;
+    margin: 0.5rem 1rem;
 }
 
 .li-item button:hover {
@@ -60,7 +90,6 @@
 .lightMode .li-item button:hover {
     background-color: rgb(209, 208, 208);
 }
-
 
 
 

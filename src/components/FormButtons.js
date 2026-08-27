@@ -2,8 +2,8 @@ import React from 'react'
 
 const FormButtons = ({value, selectCategory, selected}) => {
   const addCSSToButton = {
-    Minor: {backgroundColor: "#f5bc52"},
-    Moderate: {backgroundColor: "#26a030"},
+    Minor: {backgroundColor: "#26a030"},
+    Moderate: {backgroundColor: "#f5bc52"},
     Important: {backgroundColor: "#f5332c"}
   }
 
