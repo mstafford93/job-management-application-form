@@ -3,11 +3,6 @@
     justify-content: center;
 }
 
-@media (max-width: 1000px) {
-    .columnSection {
-        display: block;
-    }
-}
 
 .singleSection {
     width: 33%;
@@ -43,11 +38,40 @@
     padding: 0.5rem;
 }
 
+.li-item button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding:0.25rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.li-item button:hover {
+    background-color: rgb(75, 74, 74);
+}
+
+.lightMode .li-item button {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.lightMode .li-item button:hover {
+    background-color: rgb(209, 208, 208);
+}
+
+
+
 @media (max-width: 1000px) {
     .singleSection {
         justify-self: center;
         width: 70%;
         border-radius: 8px;
         min-height: 3vh;
+    }
+
+    .columnSection {
+        display: block;
     }
 }
