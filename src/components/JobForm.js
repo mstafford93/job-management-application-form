@@ -90,13 +90,11 @@ const JobForm = () => {
         }
 
         const selectedButton = (value) => {
-           if(addItem.category.some(item => item === value)){
-            return ({
-                backgroundColor: "green",
-            })
-           }
+          return addItem.category.some(item => item === value)
         }
         console.log(addItem.category)
+
+        console.log(selectedButton("Minor"))
 
     return (
         <>
@@ -124,9 +122,9 @@ const JobForm = () => {
                     </div>
                     <div className="form-details">
                         <div className="bottom-line">
-                            <FormButtons value="Minor" selectCategory={selectCategory} selectedButton={selectedButton}/>
-                            <FormButtons value="Moderate" selectCategory={selectCategory} selectedButton={selectedButton}/>
-                            <FormButtons value="Important" selectCategory={selectCategory} selectedButton={selectedButton}/>
+                            <FormButtons value="Minor" selectCategory={selectCategory} selected={selectedButton("Minor")}/>
+                            <FormButtons value="Moderate" selectCategory={selectCategory} selected={selectedButton("Moderate")}/>
+                            <FormButtons value="Important" selectCategory={selectCategory} selected={selectedButton("Important")}/>
                         </div>
                     </div>
                 </form>
