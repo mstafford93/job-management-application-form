@@ -28,8 +28,15 @@ const JobForm = () => {
         }
     }
 
-    
+    const handleNewItem = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
 
+        setAddItem(initial => {
+            return {...initial, [name]: value}
+        })
+    }
+    /*
     const handleInputChangeJob = (event) => {
         setAddItem({ ...addItem, job: event.target.value })
     }
@@ -37,6 +44,7 @@ const JobForm = () => {
     const handleInputChangeStatus = (event) => {
         setAddItem({ ...addItem, status: event.target.value })
     }
+     */
 
     const addItemToList = (event) => {
         event.preventDefault()
@@ -76,14 +84,15 @@ const JobForm = () => {
                 <form>
                     <div className='botInput'>
                         <input
+                        name='job'
                             type="text"
                             className="bot-input"
                             placeholder="Enter the job"
-                            onChange={handleInputChangeJob}
+                            onChange={handleNewItem}
                             value={addItem.job}
                         />
                         <div className='select'>
-                            <select className="job-status" onChange={handleInputChangeStatus} value={addItem.status}>
+                            <select name="status" className="job-status" onChange={handleNewItem} value={addItem.status}>
                                 <option value="" disabled>Status</option>
                                 <option value="Need To Start">Need To Start</option>
                                 <option value="In-Progress">In-Progress</option>
