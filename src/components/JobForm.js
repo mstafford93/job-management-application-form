@@ -88,6 +88,12 @@ const JobForm = () => {
                 })
             }
         }
+
+        const selectedButton = (value) => {
+           if(addItem.category.some(item => item === value)){
+            return console.log("Matches")
+           }
+        }
         console.log(addItem.category)
 
     return (
@@ -116,9 +122,9 @@ const JobForm = () => {
                     </div>
                     <div className="form-details">
                         <div className="bottom-line">
-                            <FormButtons value="Not Important" selectCategory={selectCategory}/>
-                            <FormButtons value="Quite Important" selectCategory={selectCategory}/>
-                            <FormButtons value="Important" selectCategory={selectCategory}/>
+                            <FormButtons value="Not Important" selectCategory={selectCategory} selectedButton={selectedButton}/>
+                            <FormButtons value="Quite Important" selectCategory={selectCategory} selectedButton={selectedButton}/>
+                            <FormButtons value="Important" selectCategory={selectCategory} selectedButton={selectedButton}/>
                         </div>
                     </div>
                 </form>
