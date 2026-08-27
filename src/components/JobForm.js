@@ -9,7 +9,7 @@ import FormButtons from './FormButtons';
 
 const JobForm = () => {
     const [listItems, setListItems] = useState([])
-    const [addItem, setAddItem] = useState({ id: 0, job: "", status: "" })
+    const [addItem, setAddItem] = useState({ id: 0, job: "", status: "", category: [] })
     const [toggleSwitch, setToggleSwitch] = useState(false)
     const [needToStart, setNeedToStart] = useState([])
     const [inProgress, setInProgress] = useState([])
@@ -76,7 +76,7 @@ const JobForm = () => {
         //console.log(listItems)
 
     }
-        const selectCatagory = (event) => {
+        const selectCategory = (event) => {
             console.log(event)
         }
 
@@ -107,9 +107,9 @@ const JobForm = () => {
                     </div>
                     <div className="form-details">
                         <div className="bottom-line">
-                            <FormButtons value="Not Important" selectCatagory={selectCatagory}/>
-                            <FormButtons value="Quite Important" selectCatagory={selectCatagory}/>
-                            <FormButtons value="Important" selectCatagory={selectCatagory}/>
+                            <FormButtons value="Not Important" selectCategory={selectCategory}/>
+                            <FormButtons value="Quite Important" selectCategory={selectCategory}/>
+                            <FormButtons value="Important" selectCategory={selectCategory}/>
                         </div>
                     </div>
                 </form>

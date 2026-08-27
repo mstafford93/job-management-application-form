@@ -1,8 +1,8 @@
 import React from 'react'
 
-const FormButtons = ({value, selectCatagory}) => {
+const FormButtons = ({value, selectCategory}) => {
   return (
-    <button type='button' onClick={() => selectCatagory(value)}>{value}</button>
+    <button type='button' onClick={() => selectCategory(value)}>{value}</button>
   )
 }
 
