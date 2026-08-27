@@ -76,6 +76,9 @@ const JobForm = () => {
         //console.log(listItems)
 
     }
+        const selectCatagory = (event) => {
+            console.log(event)
+        }
 
 
     return (
@@ -104,9 +107,9 @@ const JobForm = () => {
                     </div>
                     <div className="form-details">
                         <div className="bottom-line">
-                            <FormButtons value="Not Important" />
-                            <FormButtons value="Quite Important"/>
-                            <FormButtons value="Important"/>
+                            <FormButtons value="Not Important" selectCatagory={selectCatagory}/>
+                            <FormButtons value="Quite Important" selectCatagory={selectCatagory}/>
+                            <FormButtons value="Important" selectCatagory={selectCatagory}/>
                         </div>
                     </div>
                 </form>
