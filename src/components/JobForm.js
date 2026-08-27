@@ -77,9 +77,18 @@ const JobForm = () => {
 
     }
         const selectCategory = (event) => {
-            console.log(event)
+            if(addItem.category.some(item => item === event)){
+                const filterCategory = addItem.category.filter(item => item !== event)
+                setAddItem(prevState => {
+                return {...prevState, category: filterCategory}
+            })
+            } else {
+                setAddItem(prevState => {
+                    return {...prevState, category:[...prevState.category, event]}
+                })
+            }
         }
-
+        console.log(addItem.category)
 
     return (
         <>
