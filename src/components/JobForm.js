@@ -5,6 +5,7 @@ import InProgress from '../images/in-progress.png';
 import Failed from '../images/failed.png'
 import "./AppForm.css"
 import JobItem from './JobItem';
+import FormButtons from './FormButtons';
 
 const JobForm = () => {
     const [listItems, setListItems] = useState([])
@@ -103,9 +104,9 @@ const JobForm = () => {
                     </div>
                     <div className="form-details">
                         <div className="bottom-line">
-                            <button>Read Emails</button>
-                            <button>Web Parsing</button>
-                            <button>Send Emails</button>
+                            <FormButtons value="Not Important" />
+                            <FormButtons value="Quite Important"/>
+                            <FormButtons value="Important"/>
                         </div>
                     </div>
                 </form>
