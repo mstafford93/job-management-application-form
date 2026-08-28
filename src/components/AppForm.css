@@ -7,16 +7,33 @@ body {
   background-color: black;
 }
 
-.darkmode-toggle {
-    background-color: rgb(197, 197, 2);
+.topButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.topButtons button{
     margin: 0.25rem;
     padding: 0.5rem;
     border-radius: 8px;
     font-weight: 600;
 }
 
+.darkmode-toggle {
+    background-color: rgb(197, 197, 2);
+}
+
 .darkmode-toggle:hover {
     background-color: rgb(252, 252, 72);
+}
+
+.clearAll {
+    background-color: rgb(243, 61, 61);
+}
+
+.clearAll:hover {
+   background-color: rgb(224, 85, 85); 
 }
 
 .form-header {

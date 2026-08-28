@@ -94,9 +94,10 @@ const JobForm = () => {
     };
 
     return (
-        <>
+        <>  <div className='topButtons'>
             <button className='darkmode-toggle' onClick={handleToggleMode}>Dark Mode Toggle</button>
-            <button onClick={clearAllJobs}>Clear All Jobs</button>
+            <button onClick={clearAllJobs} className='clearAll'>Clear All Jobs</button>
+            </div>
             <div className="form-header">
                 <form>
                     <div className='botInput'>
